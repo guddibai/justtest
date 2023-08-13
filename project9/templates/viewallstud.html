@@ -1,0 +1,38 @@
+{% extends 'index2.html' %}
+{% block index2%}
+    <br>
+    <br>
+    <h2 style="text-align: center; font-size: 40px; color: #27418b">Welcome To View all Student</h2>
+    <table align="center" border="2">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Contact
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Usernname
+        </th>
+        <th>
+            Delete
+        </th>
+    </tr>
+    {% for x in data %}
+        <tr>
+        <th>{{ x.name }}</th>
+        <th>{{ x.age }}</th>
+        <th>{{ x.contactno }}</th>
+        <th>{{ x.gender }}</th>
+        <th>{{ x.username }}</th>
+        <th><a style="color: red" href="{% url 'deletestd' %}?un={{ x.username }}">Delete</a></th>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'index3.html' %}
+{% block index3%}
+    <br>
+    <br>
+    <table align="center" border="2">
+    <tr>
+        <th colspan="2" style="text-align: center; font-size: 40px;">
+            Student {{ name|capfirst }} Profile
+        </th>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th>{{ data.name }}</th>
+    </tr>
+    <tr>
+        <th>Age</th>
+        <th>{{ data.age }}</th>
+    </tr>
+    <tr>
+        <th>Contact no</th>
+        <th>{{ data.contactno }}</th>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <th>{{ data.gender }}</th>
+    </tr>
+    </table>
+
+{% endblock %}
